@@ -773,6 +773,14 @@
         deltaY = e.wheelDelta;
       }
       console.log('DeltaX = %i, DeltaY = %i', deltaX, deltaY);
+      if (deltaX && deltaY) {
+        if (deltaX > deltaY) {
+          deltaY = 0;
+        } else {
+          deltaX = 0;
+        }
+      }
+      
       if (e.shiftKey) {
         // reverse axis with shift key
         return [-deltaY, -deltaX];
