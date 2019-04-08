@@ -6,7 +6,7 @@
 
   /*!
    * perfect-scrollbar v1.4.0
-   * (c) 2018 Hyunje Jun
+   * (c) 2019 Hyunje Jun
    * @license MIT
    */
   function get(element) {
@@ -772,7 +772,7 @@
         deltaX = 0;
         deltaY = e.wheelDelta;
       }
-
+      console.log('DeltaX = %i, DeltaY = %i', deltaX, deltaY);
       if (e.shiftKey) {
         // reverse axis with shift key
         return [-deltaY, -deltaX];
